@@ -4,21 +4,23 @@ public class Player {
     String nome;
     int vida, dano;
 
-    public Player(String nome, int vida, int dano) {
-        this.nome = nome;
+    public Player(String nomeInserido, int vida, int dano) {
+        this.nome = nomeInserido;
         this.vida = vida;
         this.dano = dano;
     }
 
-    public void dadosPlayer() {
-        System.out.println("==================");
-        System.out.println("Nome: " + nome);
-        System.out.println("Vida: " + vida);
-        System.out.println("Dano: " + dano);
-        System.out.println("==================");
+
+    public void status() throws InterruptedException {
+        Util.escrever("\nNome: " + this.nome);
+        Util.escrever("\nVida: " + this.vida);
+        Util.escrever("\nDano: " + this.dano);
     }
 
-    public void receberDano(int dano) {
-        this.vida -= this.dano;
+    public void receberDano(int danoRecebido) {
+        this.vida -= danoRecebido;
+        if (this.vida < 0) {
+            this.vida = 0;
+        }
     }
 }
