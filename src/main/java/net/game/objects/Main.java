@@ -42,7 +42,7 @@ public class Main {
         player.vida = 30;
         player.dano = 5;
 
-        rato.vida = 60;
+        rato.vida = 50;
         rato.dano = 4;
 
 
