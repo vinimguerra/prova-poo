@@ -44,6 +44,7 @@ public class Main {
 
         rato.vida = 50;
         rato.dano = 4;
+        round = 1;
 
 
         Util.escrever("\n\nReiniciar?\n>>> ");
