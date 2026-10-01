@@ -1,21 +1,17 @@
 package net.game.objects;
 
 public class Inimigo {
-    int vida;
-    int dano;
+    int vida, dano;
 
     public Inimigo(int vida, int dano) {
         this.vida = vida;
         this.dano = dano;
     }
 
-    public void dadosInimigo() {
-        System.out.println("Vida: " + vida);
-        System.out.println("Dano: " + dano);
-        System.out.println("==================");
-    }
-
-    public void receberDano(int dano) {
-        this.vida -= this.dano;
+    public void receberDano(int danoRecebido) {
+        this.vida -= danoRecebido;
+        if (this.vida < 0) {
+            this.vida = 0;
+        }
     }
 }
